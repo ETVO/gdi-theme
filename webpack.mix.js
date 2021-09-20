@@ -8,3 +8,5 @@ mix.js('src/js/main.js', 'js')
 
 mix.minify('assets/js/main.js');
 mix.minify('assets/css/main.css');
+
+mix.copy('node_modules/bootstrap-icons/font/', 'assets/fonts/bootstrap-icons');

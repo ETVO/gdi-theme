@@ -152,6 +152,8 @@ final class GDI_Theme
 		$dir = THEME_CSS_URI;
 		
 		$version = THEME_VERSION;
+
+		wp_enqueue_style('theme-css', $dir . 'main.min.css', [], $version, false);
 	}
 
 	/**
@@ -164,6 +166,8 @@ final class GDI_Theme
 		$dir = THEME_JS_URI;
 		
 		$version = THEME_VERSION;
+
+		wp_enqueue_script('theme-js', $dir . 'main.min.js', [], $version, false);
 	}
 
 	/**
@@ -200,6 +204,8 @@ final class GDI_Theme
 		$dir = THEME_FONT_URI;
 		
 		$version = THEME_VERSION;
+
+		wp_enqueue_style('bootstrap-icons', $dir . 'bootstrap-icons/bootstrap-icons.css', [], "1.5.0", false);
 	}
 
 	/**
