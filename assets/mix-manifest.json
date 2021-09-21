@@ -1,8 +1,12 @@
 {
     "/js/main.js": "/js/main.js",
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/admin.css": "/css/admin.css",
     "/css/main.css": "/css/main.css",
     "/js/main.min.js": "/js/main.min.js",
     "/css/main.min.css": "/css/main.min.css",
+    "/css/admin.min.css": "/css/admin.min.css",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
     "/fonts/bootstrap-icons/bootstrap-icons.css": "/fonts/bootstrap-icons/bootstrap-icons.css",
     "/fonts/bootstrap-icons/bootstrap-icons.json": "/fonts/bootstrap-icons/bootstrap-icons.json",
     "/fonts/bootstrap-icons/index.html": "/fonts/bootstrap-icons/index.html"

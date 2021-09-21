@@ -94,6 +94,10 @@ final class GDI_Theme
 	{
 		// Directory of files to be included
 		$dir = THEME_INC_DIR;
+
+		require_once($dir . 'walker/bs_menu_walker.php');
+		require_once($dir . 'customizer/customizer.php');
+		require_once($dir . 'kirki/kirki-installer-section.php');
 	}
 
 	/**
@@ -103,6 +107,13 @@ final class GDI_Theme
 	 */
 	public static function theme_setup() 
 	{
+		// Register nav menus
+		register_nav_menus(
+			array(
+				"main_menu"   => esc_html__( "Main", "emertech" )
+			)
+		);
+
 		// Enable support for site logo
 		add_theme_support(
 			"custom-logo",
@@ -116,6 +127,13 @@ final class GDI_Theme
 				)
 			)
 		);
+
+		add_filter('nav_menu_css_class', function($classes, $item, $args) {
+			if(isset($args->li_class)) {
+				$classes[] = $args->li_class;
+			}
+			return $classes;
+		}, 1, 3);
 
 		// Enable support for Post Formats.
 		add_theme_support( 'post-formats', array( 'video', 'gallery', 'audio', 'quote', 'link' ) );
@@ -153,7 +171,10 @@ final class GDI_Theme
 		
 		$version = THEME_VERSION;
 
-		wp_enqueue_style('theme-css', $dir . 'main.min.css', [], $version, false);
+		wp_enqueue_style('theme-css', $dir . 'main.css', [], $version, false);
+		
+		wp_deregister_style( "bootstrap" );
+		wp_enqueue_style('bootstrap', $dir . 'bootstrap.css', [], $version, false);
 	}
 
 	/**
@@ -167,7 +188,7 @@ final class GDI_Theme
 		
 		$version = THEME_VERSION;
 
-		wp_enqueue_script('theme-js', $dir . 'main.min.js', [], $version, false);
+		wp_enqueue_script('theme-js', $dir . 'main.js', [], $version, false);
 	}
 
 	/**
@@ -180,6 +201,9 @@ final class GDI_Theme
 		$dir = THEME_CSS_URI;
 		
 		$version = THEME_VERSION;
+
+		wp_enqueue_style('theme-admin-css', $dir . 'admin.css', [], $version, false);
+
 	}
 
 	/**
@@ -206,6 +230,7 @@ final class GDI_Theme
 		$version = THEME_VERSION;
 
 		wp_enqueue_style('bootstrap-icons', $dir . 'bootstrap-icons/bootstrap-icons.css', [], "1.5.0", false);
+		wp_enqueue_style('inter', $dir . 'Inter/font.css', [], $version, false);
 	}
 
 	/**

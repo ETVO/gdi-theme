@@ -1,0 +1,45 @@
+$footer-bg: #0A1430;
+
+footer {
+    background-color: $footer-bg;
+
+    .info {
+        .contact {
+            .list .list-item {
+                
+                .text {
+                    font-weight: 600;
+                    color: #F2F2F4;
+                }
+            }
+        }
+    
+        .address {
+            small {
+                font-size: .75rem;
+                color: #A5B0CC;
+            }
+        }
+    }
+
+    .social {
+        border-left: solid 2px #777E8E;
+
+        .title {
+            font-weight: 600;
+            color: #F2F2F4;
+        }
+
+        .icons {
+            a {
+                font-size: 30px;
+
+                margin-right: 10px;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

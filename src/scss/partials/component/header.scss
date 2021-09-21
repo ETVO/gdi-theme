@@ -1,0 +1,105 @@
+$header-bg: #010C2A;
+$header-fg: #fff;
+$header-fg-hover: #F1A21E;
+
+header {
+    background-color: $header-bg;
+    width: 100%;
+    font-size: 200;
+
+    .navbar-brand {
+        .custom-logo {
+            width: 110px;
+            height: auto;
+        }
+    }
+
+    .navbar-toggler {
+        .icon {
+            font-size: 1.8rem;
+        }
+    }
+
+    .menu-item {
+        display: flex;
+        font: normal normal 200 18px/21px Inter;
+        text-transform: uppercase;
+        
+        .nav-link {
+            margin: auto;
+            
+            color: $header-fg;
+            font-size: 1rem;
+
+            &:hover, &:active, &:focus {
+                color: $header-fg-hover;
+            }
+
+            span {
+                transition: border-bottom-color 0.2s ease;
+                border-bottom: solid 1px transparent;
+            }
+        }
+
+        .dropdown-menu {
+            text-align: right;
+    
+            color: $header-fg;
+            border: none;
+            border-radius: 5px;
+            background-color: $header-bg;
+    
+            .dropdown-item {
+                color: $header-fg;
+                
+                &:hover, &:active, &:focus {
+                    color: $header-fg-hover;
+                }   
+            }
+        }
+
+        &.active {
+            // &:hover, &:active, &:focus {
+            .nav-link {
+
+                span {
+                    border-bottom-color: var(--bs-primary);
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        color: $header-fg;
+    
+        .fa-lg {
+            line-height: unset;
+        }
+    }
+
+    .action a {
+        text-decoration: none !important;
+    }
+
+}
+
+@media all and (min-width:768.1px) {
+    header {
+        .action {
+            flex-basis: unset;
+            flex-grow: unset;
+            align-items: unset;
+        }
+    }
+}
+
+@media all and (max-width:768px) {
+    
+    header {
+
+        .custom-logo {
+            width: 90px !important;
+        }
+    }
+}
