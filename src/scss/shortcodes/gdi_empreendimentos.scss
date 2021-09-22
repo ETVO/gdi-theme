@@ -1,0 +1,86 @@
+.gdi_empreendimentos {
+
+    .item {
+        .image {
+        }
+
+        .info {
+            background-color: #F2F2F4;
+            border: 1px solid #CED1D9;
+
+            padding: 20px;
+
+            .nome {
+                font-weight: 500;
+                letter-spacing: 2.4px;
+                color: #000000;
+                text-transform: uppercase;
+            }
+
+            .endereco {
+                display: inline-block;
+                color: #777E8E;
+                font-size: .75rem !important;
+                line-height: 1.325 !important;
+            }
+            .list {
+                .icon svg {
+                    width: 20px !important;
+                    height: auto;
+                }
+                .text {
+                    letter-spacing: -0.54px;
+                }
+            }
+        }
+
+        .action {
+            a {
+                padding: 10px 20px;
+                display: block;
+                
+                background-color: #CC7E00;
+                color: white;
+
+                font-size: .75rem !important;
+
+                transition: background-color .2s;
+
+                &:hover, &:active, &:focus {
+                    background-color: #BA7300;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:767.99px) {
+
+    .gdi_empreendimentos {
+        .items {
+            max-width: 380px !important;
+            margin-left: auto;
+            margin-right: auto;
+
+            .item {
+                .info {
+                    .nome {
+                        letter-spacing: unset !important;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media all and (max-width:575.99px) {
+    .gdi_empreendimentos {
+        .items {
+            .item {
+                padding-left: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}

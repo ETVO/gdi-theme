@@ -1,0 +1,88 @@
+.blog_feed {
+
+    background-color: #E4E7F0;
+    
+    &.blog-block {
+        background-color: #777E8E;
+        
+        .thin-title {
+            h1, h2, h3 {
+                color: white !important;
+            }
+        }
+    }
+
+    .items {      
+        
+        .item {
+
+            .image {
+                
+                // An aspect ratio of 2:3
+                position: relative;
+                padding-bottom: 66.67%;
+                
+                img {
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    
+                    cursor: pointer;
+                } 
+            }
+    
+            .info {
+                background-color: #FFFFFF;
+    
+                padding: 20px;
+   
+                .upper-part {
+                    min-height: 120px;
+                    
+                    .post_title {
+                        font-weight: 600;
+                        color: #000000;
+                    }
+        
+                    .excerpt {
+                        font-size: .75rem;
+                        margin-bottom: 0;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+    
+                .date {
+                    color: #777E8E;
+                    font-size: .75rem;
+                }
+    
+                a.action {
+                    padding-top: 10px;
+                    display: block;
+                    
+                    background-color: white;
+                    color: #CC7E00;
+    
+                    font-size: .75rem !important;
+                    font-weight: 600;
+    
+                    transition: background-color .2s;
+    
+                    span {
+                        -webkit-text-stroke: 1px #CC7E00;
+                    }
+    
+                    &:hover, &:active, &:focus {
+                        color: #BA7300;
+                    }
+                }
+            }
+    
+            
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.thin-title {
+    h1, h2, h3 {
+        font-weight: 200 !important;
+        letter-spacing: 4.8px;
+        color: #010C2A;
+        text-transform: uppercase;
+    }
+}
+
+
+@media all and (max-width:767.99px) { 
+    
+    .thin-title {
+        h1, h2, h3 {
+            letter-spacing: unset;
+        }
+    }
+}

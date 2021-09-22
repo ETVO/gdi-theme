@@ -1,6 +1,19 @@
+// Import partials 
 @import "partials/header.scss";
 @import "partials/footer.scss";
 @import "partials/bottom.scss";
+
+// Import shortcodes 
+@import "shortcodes/gdi_empreendimentos.scss";
+@import "shortcodes/blog_feed.scss";
+
+// Import components 
+@import 'components';
+
+
+html {
+    scroll-behavior: smooth;
+}
 
 a {
     text-decoration: none !important;

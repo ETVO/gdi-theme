@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Customizer controls and options
+ * Customizer controls and options
  * 
  * @package WordPress
  * @subpackage GDI-Theme
@@ -265,6 +265,50 @@ class GDI_Customizer {
             'label'       => esc_html__('Logo Rodapé'),
             'section'     => $section,
             'default'     => '',
+        ] );
+        
+
+        /**
+         * ------------------- Section ----------------
+         */
+        $section = 'gdi_options';
+        $wp_customize->add_section(
+            $section,
+            array(
+                'title'    => __('Opções'),
+                'priority' => 30,
+                'panel'    => $panel,
+            )
+        );
+       
+        Kirki::add_field( 
+            'title_empre',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'title_empre',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Empreendimentos') 
+                    . '</h3>'
+            )
+        );
+
+
+        /**
+         *  Empre Archive Link
+         */
+        $wp_customize->add_setting(
+            'gdi_empre_link',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'gdi_empre_link', [
+            'type'     => 'text',
+            'settings' => 'gdi_empre_link',
+            'label'    => esc_html__('Link da página de Empreendimentos'),
+            'section'  => $section
         ] );
         
     }

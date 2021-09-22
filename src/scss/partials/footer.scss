@@ -27,7 +27,14 @@ footer {
         .address {
             small {
                 font-size: .75rem;
-                color: #A5B0CC;
+                
+                a {
+                    color: #A5B0CC;
+                    
+                    &:hover, &:active, &:focus {
+                        color: var(--bs-primary);
+                    }
+                }
             }
         }
     }

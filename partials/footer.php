@@ -81,7 +81,9 @@ $icons = get_theme_mod('gdi_social_icons');
 
                     <div class="address mt-3 mt-sm-4">
                         <small>
-                            <?php echo $address; ?>
+                            <a href="https://www.google.com/maps/place/<?php echo $address; ?>" target="_blank">
+                                <?php echo $address; ?>
+                            </a>
                         </small>
 
                     </div>
