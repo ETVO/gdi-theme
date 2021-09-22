@@ -8,6 +8,6 @@
 
 get_header();
 
-// Render page content
+get_template_part("partials/content");
 
 get_footer();

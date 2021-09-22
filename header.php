@@ -22,4 +22,4 @@
 
     <?php wp_body_open(); ?>
     
-    <?php get_template_part("partials/component/header"); ?>
+    <?php get_template_part("partials/header"); ?>

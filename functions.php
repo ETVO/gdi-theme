@@ -49,14 +49,15 @@ final class GDI_Theme
 		{
 			// Hook to customize theme login style
 			// add_action( "login_enqueue_scripts", array( THEME_CLASS, "theme_login_style" ) );
-            
+			
 			// Enqueue theme scripts
 			add_action("wp_enqueue_scripts", array(THEME_CLASS, "theme_css"));
-            add_action("wp_enqueue_scripts", array(THEME_CLASS, "theme_js"), 1);
-            
-			// Enqueue theme fonts
-			add_action("wp_enqueue_scripts", array(THEME_CLASS, "theme_fonts"));
+			add_action("wp_enqueue_scripts", array(THEME_CLASS, "theme_js"), 1);
 		}
+            
+		// Enqueue theme fonts
+		add_action("wp_enqueue_scripts", array(THEME_CLASS, "theme_fonts"));
+		add_action("admin_enqueue_scripts", array(THEME_CLASS, "theme_fonts"));
 	}
 
 	/**
@@ -188,7 +189,7 @@ final class GDI_Theme
 		
 		$version = THEME_VERSION;
 
-		wp_enqueue_script('theme-js', $dir . 'main.js', [], $version, false);
+		wp_enqueue_script('theme-js', $dir . 'main.js', ["jquery"], $version, false);
 	}
 
 	/**
@@ -229,8 +230,8 @@ final class GDI_Theme
 		
 		$version = THEME_VERSION;
 
-		wp_enqueue_style('bootstrap-icons', $dir . 'bootstrap-icons/bootstrap-icons.css', [], "1.5.0", false);
 		wp_enqueue_style('inter', $dir . 'Inter/font.css', [], $version, false);
+		wp_enqueue_style('bootstrap-icons', $dir . 'bootstrap-icons/bootstrap-icons.css', [], "1.5.0", false);
 	}
 
 	/**

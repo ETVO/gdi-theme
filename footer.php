@@ -6,8 +6,8 @@
  * @subpackage GDI-Theme
  */
 
-get_template_part("partials/component/footer");
-get_template_part("partials/component/bottom");
+get_template_part("partials/footer");
+get_template_part("partials/bottom");
 
 wp_footer();
 
