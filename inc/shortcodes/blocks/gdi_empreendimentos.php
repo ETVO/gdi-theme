@@ -127,7 +127,7 @@ function gdi_empreendimentos($attrs) {
                                 <?php endif; ?>
                             </div>
                             <div class="action">
-                                <a href="<?php $permalink; ?>" class="d-flex">
+                                <a href="<?php echo $permalink; ?>" class="d-flex">
                                     <div class="me-auto">
                                         mais detalhes
                                     </div>

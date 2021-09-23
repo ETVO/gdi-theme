@@ -1,0 +1,87 @@
+.address_map {
+    position: relative;
+
+    iframe {
+        width: 100% !important;
+        height: 400px;
+        object-position: right;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 200px;
+        width: auto;
+        height: 100%;
+        background-color: rgba(1, 12, 42, 0.9);
+        // background: linear-gradient(90deg, rgba(1, 12, 42, 1), rgba(1, 12, 42, .9) 200px);
+        
+
+        padding: 40px 60px;
+        // padding-left: 240px;
+
+        .logo {
+            svg, img {
+                width: 180px;
+                height: auto;
+            }
+        }
+
+        .address {
+            color: white;
+            font-size: .9rem;
+        }
+
+        .action {
+            a {
+                display: block;
+                border: 1px solid #FFFFFF;
+                border-radius: 5px;
+                font-size: .9rem;
+
+                color: white;
+
+                padding: 10px 20px;
+
+                transition: background-color .2s;
+
+                &:hover, &:active, &:focus {
+                    background-color: #FFFFFF1A;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:992px) {
+    .address_map {
+        .overlay {
+            left: 100px;
+        }
+    }
+}
+
+@media all and (max-width:767px) {
+    .address_map {
+
+        iframe {
+            height: 250px;
+        }
+
+        .overlay {
+            position: relative;
+            left: 0;
+            width: 100%;
+            height: auto;
+
+            padding: 40px 20px;
+
+            .logo {
+                svg, img {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
