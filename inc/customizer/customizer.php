@@ -250,7 +250,7 @@ class GDI_Customizer {
         );
 
         /**
-         *  WhatsApp No.
+         *  Footer logo
          */
         $wp_customize->add_setting(
             'gdi_footer_logo',
@@ -294,7 +294,6 @@ class GDI_Customizer {
             )
         );
 
-
         /**
          *  Empre Archive Link
          */
@@ -310,6 +309,42 @@ class GDI_Customizer {
             'settings' => 'gdi_empre_link',
             'label'    => esc_html__('Link da página de Empreendimentos'),
             'section'  => $section
+        ] );
+
+        /**
+         *  Morar ou Alugar picture
+         */
+        $wp_customize->add_setting(
+            'gdi_moa_img',
+            array(
+                'default' => ''
+            )
+        );
+        
+        Kirki::add_field( 'gdi_moa_img', [
+            'type'        => 'image',
+            'settings'    => 'gdi_moa_img',
+            'label'       => esc_html__('Imagem Morar ou Alugar'),
+            'section'     => $section,
+            'default'     => '',
+        ] );
+
+        /**
+         *  Logo Studio Mooka
+         */
+        $wp_customize->add_setting(
+            'gdi_mooka_logo',
+            array(
+                'default' => ''
+            )
+        );
+        
+        Kirki::add_field( 'gdi_mooka_logo', [
+            'type'        => 'image',
+            'settings'    => 'gdi_mooka_logo',
+            'label'       => esc_html__('Logo Studio Mooka'),
+            'section'     => $section,
+            'default'     => '',
         ] );
 
        

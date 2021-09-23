@@ -1,0 +1,29 @@
+.concepcao {
+    background-color: #777E8E;
+    color: white;
+
+    .thin-title h2 {
+        color: white;
+    }
+
+    .field {
+        border-left: solid 2px #A5B0CC;
+
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &:first-of-type {
+            border-left: none;
+        }
+
+        .name {
+            color: #F2F2F4;
+            font-size: .9rem;
+        }
+
+        .value {
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+    }
+}   

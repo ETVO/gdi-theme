@@ -3,6 +3,7 @@
 
     color: #010c2a !important;
     border: solid 1px #010c2a;
+    background-color: transparent;
 
     font-size: 0.75rem;
     font-weight: 600;
@@ -35,5 +36,9 @@
         &:focus {
             background-color: #FFFFFF26;
         }
+    }
+
+    &.wider {
+        padding: 10px 30px;
     }
 }

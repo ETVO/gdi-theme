@@ -101,6 +101,7 @@ final class GDI_Theme
 		require_once($dir . 'kirki/kirki-installer-section.php');
 		require_once($dir . 'shortcodes/shortcodes.php');
 		require_once($dir . 'cpt/cpt-empre.php');
+		require_once($dir . 'helpers/helpers.php');
 	}
 
 	/**

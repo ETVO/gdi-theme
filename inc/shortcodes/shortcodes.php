@@ -44,9 +44,13 @@ class GDI_Shortcodes {
             'default_submit',
             'sistema_qualidade',
             'address_map',
+            'sistema_qualidade_empre',
+            'morar_ou_alugar',
+            'concepcao',
             'icon/medidas',
             'icon/habitacoes',
             'icon/dark_seal',
+            'icon/gdi',
         );
 
         // Add shortcodes
