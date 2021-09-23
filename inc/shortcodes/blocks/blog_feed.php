@@ -113,7 +113,7 @@ function blog_feed($attrs) {
                         $tag_name = get_the_tags()[0];
 
                         ?>
-                        <div class="item col-12 col-md-3">
+                        <div class="item col-12 col-sm-6 col-lg-3">
                             <div class="image clink" href="<?php echo $permalink; ?>">
                                 <img class="w-100" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
                                 <div class="tag-overlay">

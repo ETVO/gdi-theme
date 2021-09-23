@@ -1,0 +1,15 @@
+.default_submit {
+    border: none;
+    border-radius: 5px;
+
+    background-color: #010C2A;
+    color: white;
+
+    padding: 10px 20px;
+
+    transition: background-color .2s;
+
+    &:hover, &:active, &:focus {
+        background-color: #12265C;
+    }
+}

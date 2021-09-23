@@ -280,6 +280,7 @@ class GDI_Customizer {
                 'panel'    => $panel,
             )
         );
+
        
         Kirki::add_field( 
             'title_empre',
@@ -308,6 +309,38 @@ class GDI_Customizer {
             'type'     => 'text',
             'settings' => 'gdi_empre_link',
             'label'    => esc_html__('Link da página de Empreendimentos'),
+            'section'  => $section
+        ] );
+
+       
+        Kirki::add_field( 
+            'title_form',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'title_form',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Formulário') 
+                    . '</h3>'
+            )
+        );
+
+
+        /**
+         *  Empre Archive Link
+         */
+        $wp_customize->add_setting(
+            'gdi_form',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'gdi_form', [
+            'type'     => 'text',
+            'settings' => 'gdi_form',
+            'label'    => esc_html__('Shortcode do Formulário'),
+            'description'    => esc_html__('Do plugin Contact Form 7'),
             'section'  => $section
         ] );
         

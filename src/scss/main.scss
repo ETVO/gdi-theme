@@ -6,6 +6,8 @@
 // Import shortcodes 
 @import "shortcodes/gdi_empreendimentos.scss";
 @import "shortcodes/blog_feed.scss";
+@import "shortcodes/form_simple.scss";
+@import "shortcodes/default_submit.scss";
 
 // Import components 
 @import 'components';
@@ -18,3 +20,4 @@ html {
 a {
     text-decoration: none !important;
 }
+

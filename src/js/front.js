@@ -35,7 +35,6 @@
                 // Get item
                 var item = $items[i];
                 var upperPart = $(item).find('.upper-part')[0];
-                console.log(upperPart);
 
                 if(discover) {
                     if(upperPart.clientHeight > biggest) {
@@ -43,7 +42,7 @@
                     }
                 }
                 else {
-                    upperPart.style = 'height: ' + biggest + 'px;';
+                    upperPart.style = 'min-height: ' + biggest + 'px;';
                 }
             }
 
@@ -73,7 +72,7 @@
         }
 
         /**
-         * Invocate functions when document.body is ready 
+         * Invoke functions when document.body is ready 
          */
         $(document.body).ready(function (){
             generateBlogFeed();

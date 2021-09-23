@@ -86,3 +86,17 @@
         }
     }
 }
+
+@media all and (max-width:575.99px) {
+    .blog_feed {
+        .items {
+            max-width: 380px !important;
+            margin-left: auto;
+            margin-right: auto;
+            .item {
+                padding-left: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}

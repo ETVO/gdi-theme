@@ -18,14 +18,30 @@ class GDI_Shortcodes {
 
     /**
      * Setup the shortcodes
+     * 
+     * @since 1.0
      */
     public function __construct()
+    {
+        $this->register_shortcodes();
+
+        add_filter('wpcf7_form_elements', [SHORTCODES_CLASS, 'add_support_wpcf7']);
+    }
+
+    /**
+     * Register all of the shortcodes and require their files
+     *
+     * @since 1.0
+     */
+    public static function register_shortcodes() 
     {
         $dir = SHORTCODES_DIR;
         
         $codes = array(
             'gdi_empreendimentos',
             'blog_feed',
+            'form_simple',
+            'default_submit',
             'icon/medidas',
             'icon/habitacoes',
         );
@@ -38,6 +54,19 @@ class GDI_Shortcodes {
                 add_shortcode($code_function, $code_function);
             }
         }
+    }
+
+    /**
+     * Add filter to make CF7 shortcode-friendly
+     *
+     * @param $form
+     * @since 1.0
+     */
+    public static function add_support_wpcf7( $form ) 
+    {
+        $form = do_shortcode($form);
+        
+        return $form;
     }
     
 }
