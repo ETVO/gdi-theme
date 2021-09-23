@@ -42,6 +42,8 @@ class GDI_Shortcodes {
             'blog_feed',
             'form_simple',
             'default_submit',
+            'sistema_qualidade',
+            'address_map',
             'icon/medidas',
             'icon/habitacoes',
         );
