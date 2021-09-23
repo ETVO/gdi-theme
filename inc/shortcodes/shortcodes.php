@@ -46,6 +46,7 @@ class GDI_Shortcodes {
             'address_map',
             'icon/medidas',
             'icon/habitacoes',
+            'icon/dark_seal',
         );
 
         // Add shortcodes

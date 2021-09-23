@@ -1,0 +1,61 @@
+
+.form_multiple {
+    .content {
+        max-width: 550px;
+
+        .title {
+            h1, h2, h3, h4, h5 {
+
+            }
+        }
+
+        .form {
+            .wpcf7 {
+                width: 100%;
+
+                form {
+                    width: 100%;
+                }
+
+                p label {
+                    display: block;
+                    width: 100% !important;
+
+                    font-size: .875rem;
+                    color: #4E4D4D;
+                    margin-bottom: 5px;       
+                }
+                
+                .wpcf7-form-control-wrap {
+                    width: 100%;
+
+                    input, textarea {
+                        width: 100%;
+
+                        font-size: 1rem;
+
+                        padding: 10px 20px;
+
+                        background-color: #F2F2F4;
+                        color: #000;
+                        
+                        border-radius: 5px;
+                        border: solid 1px #F2F2F4;
+
+                        &::placeholder {
+                            color: #777E8E;
+                        }
+                    }
+
+                    textarea {
+                        height: 100px;
+                    }
+
+                    input[type="submit"] {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+}
