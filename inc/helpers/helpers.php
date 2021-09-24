@@ -14,3 +14,16 @@ if(!function_exists('get_image_props')) {
         );
     }
 }
+
+if(!function_exists('get_image_props_id')) {
+    function get_image_props_id($id) {
+        $caption = wp_get_attachment_caption( $id );
+        $url = wp_get_attachment_url( $id );
+        
+        return array (
+            'id' => $id,
+            'url' => $url,
+            'caption' => $caption,
+        );
+    }
+}

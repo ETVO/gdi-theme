@@ -234,6 +234,7 @@ final class GDI_Theme
 		$version = THEME_VERSION;
 
 		wp_enqueue_style('inter', $dir . 'Inter/font.css', [], $version, false);
+		wp_enqueue_style('buffalo', $dir . 'Buffalo/font.css', [], $version, false);
 		wp_enqueue_style('bootstrap-icons', $dir . 'bootstrap-icons/bootstrap-icons.css', [], "1.5.0", false);
 	}
 

@@ -46,8 +46,9 @@ function gdi_empreendimentos($attrs) {
         'post_type'              => $post_type,
         'post_status'            => array('publish'),
         'has_password'           => false,
-        'nopaging'               => $nopaging,
+        // 'nopaging'               => $nopaging,
         'posts_per_page'         => $ppp,
+        'no_found_posts'         => true,
         
         // Order ASC first by 'menu_order', only after by 'title' or 'date'
         'orderby'                => array( 'menu_order' => 'ASC' , $orderby => $order ), 
@@ -76,6 +77,7 @@ function gdi_empreendimentos($attrs) {
                 <div class="items row g-3 py-3">
                 <?php
                     while ($query->have_posts()) :
+                        
                         $query->the_post();
                         
                         $post = get_post();

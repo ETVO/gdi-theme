@@ -1,22 +1,23 @@
-// Import partials 
+// Import partials
 @import "partials/header.scss";
 @import "partials/footer.scss";
 @import "partials/bottom.scss";
 
-// Import shortcodes 
+// Import shortcodes
 @import "shortcodes/gdi_empreendimentos.scss";
 @import "shortcodes/blog_feed.scss";
 @import "shortcodes/form_simple.scss";
+@import "shortcodes/form_multiple.scss";
 @import "shortcodes/default_submit.scss";
 @import "shortcodes/sistema_qualidade.scss";
 @import "shortcodes/address_map.scss";
 @import "shortcodes/sistema_qualidade_empre.scss";
 @import "shortcodes/morar_ou_alugar.scss";
 @import "shortcodes/concepcao.scss";
+@import "shortcodes/book_empre.scss";
 
-// Import components 
-@import 'components';
-
+// Import components
+@import "components";
 
 html {
     scroll-behavior: smooth;
@@ -26,3 +27,35 @@ a {
     text-decoration: none !important;
 }
 
+.buffalo {
+    font-family: Buffalo, "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow-y: scroll !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f2f2f4;
+    background: #E4E7F0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #777E8E;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5C6373;
+}

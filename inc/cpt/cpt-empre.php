@@ -102,7 +102,7 @@ class CPT_Empre {
             'items_published'               => __('Empreendimento publicado'),
             'items_published_protectedly'   => __('Empreendimento publicado em privado'),
             'item_reverted_to_draft'        => __('Empreendimento revertido a rascunho'),
-            'item_updated'                  => __('Empreendimento actualizado'),
+            'item_updated'                  => __('Empreendimento atualizado'),
         );
 
         $supports = array(

@@ -71,12 +71,39 @@
             });
         }
 
+        function generateFormMultiple() {
+            $(".form_multiple").each(function() {
+
+                var options = this;
+
+                changeDepartamentos(options);
+            
+                $(this).find('.nav-link').on('click', function() {
+                    changeDepartamentos(options);
+                });
+                
+            });
+        }
+
+        function changeDepartamentos(options) {
+            var input = $(options).find('input[name="departamentos"]').get(0);
+            var form = $(options).find('form').get(0);
+
+            var navActive = $(options).find('.nav-link.active').get(0);
+
+            value = navActive.innerHTML.trim(); 
+            if(value == '')
+                value = 'Geral';
+            input.value = value;
+        }
+
         /**
          * Invoke functions when document.body is ready 
          */
         $(document.body).ready(function (){
             generateBlogFeed();
             generateClickableCustomLinks();
+            generateFormMultiple();
         });
     }
 )

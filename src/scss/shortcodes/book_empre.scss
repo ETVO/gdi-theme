@@ -1,0 +1,73 @@
+
+.book_empre {
+    .image {
+        img {
+            max-height: 500px;
+            object-fit: cover;
+        }
+    }
+    .content {
+        .button {
+            a {
+                padding: 10px 20px;
+                background-color: #F1A21E; 
+
+                border-radius: 5px;
+
+                color: white;
+
+                transition: background-color .2s;
+
+                .text {
+                    
+                    font-size: .9rem;
+                }
+
+                &:hover, &:active, &:focus {
+                    background-color: #CC7E00;
+                }
+            }
+        }
+
+        .link {
+            a {
+                color: #777E8E !important;
+    
+                .text {
+                    font-size: .9rem;
+                }
+
+                &:hover, &:active, &:focus {
+                    .text {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:767.99px) {
+    .book_empre {
+        .image {
+            img {
+                max-height: 400px;
+            }
+        }
+    }
+}
+
+@media all and (max-width:767.99px) {
+    .book_empre {
+        .image {
+            img {
+                max-height: 300px;
+            }
+        }
+
+        .content {
+            max-width: 500px;
+                
+        }
+    }
+}

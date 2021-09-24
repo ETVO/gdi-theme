@@ -29,11 +29,11 @@ function blog_feed($attrs) {
 
     // WP_Query arguments
     $args = array(
-        'post_type'              => 'post',
-        'post_status'            => array('publish'),
-        'has_password'           => false,
-        'nopaging'               => $nopaging,
-        'posts_per_page'         => $ppp,
+        'post_type'         => 'post',
+        'post_status'       => array('publish'),
+        'has_password'      => false,
+        'posts_per_page'    => $ppp,
+        'no_found_posts'    => true,
         
         
         // Order ASC first by 'menu_order', only after by 'title' or 'date'
@@ -45,9 +45,9 @@ function blog_feed($attrs) {
     if($category) {
         $args['tax_query'] = array(
             array(
-                'taxonomy' => 'category',
-                'field'    => 'slug',
-                'terms'    => $cat_slug,
+                'taxonomy'  => 'category',
+                'field'     => 'slug',
+                'terms'     => $cat_slug,
             ),
         );
 
