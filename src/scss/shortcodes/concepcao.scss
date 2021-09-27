@@ -27,3 +27,38 @@
         }
     }
 }   
+@media all and (max-width:991.99px) {
+    .concepcao {
+    
+        .field {
+            border-left: none;
+            border-top: solid 2px #A5B0CC;
+    
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            max-width: 90% !important;
+            margin: auto;
+        }
+    }   
+}
+
+@media all and (max-width:767.99px) {
+    .concepcao {
+    
+        .field {
+            border-left: none;
+            border-top: solid 2px #A5B0CC;
+    
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            max-width: 95%;
+            margin: auto;
+    
+            &:first-of-type {
+                border-top: none;
+            }
+        }
+    }   
+}

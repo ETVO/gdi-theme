@@ -40,7 +40,7 @@ function concepcao($attrs) {
                     $value = get_sub_field($field['attr']);
 
                     ?>
-                    <div class="field col text-center px-2">
+                    <div class="field col-12 col-md-6 col-lg-3 text-center px-2">
                         <small class="name">
                             <?php echo $field['name']; ?>
                         </small>
