@@ -181,10 +181,10 @@ final class GDI_Theme
 		
 		$version = THEME_VERSION;
 
-		wp_enqueue_style('theme-css', $dir . 'main.css', [], $version, false);
+		wp_enqueue_style('theme-css', $dir . 'main.min.css', [], $version, false);
 		
 		wp_deregister_style( "bootstrap" );
-		wp_enqueue_style('bootstrap', $dir . 'bootstrap.css', [], $version, false);
+		wp_enqueue_style('bootstrap', $dir . 'bootstrap.min.css', [], $version, false);
 	}
 
 	/**
@@ -198,7 +198,7 @@ final class GDI_Theme
 		
 		$version = THEME_VERSION;
 
-		wp_enqueue_script('theme-js', $dir . 'main.js', ["jquery"], $version, false);
+		wp_enqueue_script('theme-js', $dir . 'main.min.js', ["jquery"], $version, false);
 	}
 
 	/**
@@ -212,7 +212,7 @@ final class GDI_Theme
 		
 		$version = THEME_VERSION;
 
-		wp_enqueue_style('theme-admin-css', $dir . 'admin.css', [], $version, false);
+		wp_enqueue_style('theme-admin-css', $dir . 'admin.min.css', [], $version, false);
 
 	}
 
