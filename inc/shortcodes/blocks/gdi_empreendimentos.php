@@ -65,7 +65,7 @@ function gdi_empreendimentos($attrs) {
         ?>
 
         <section class="gdi_empreendimentos py-3 show-all-<?php echo $show_all; ?>">
-            <div class="container col-12 col-xl-10 pt-5 mx-auto">
+            <div class="container col-12 col-md-10 col-xl-10 pt-5 mx-auto">
                 <?php if($show_title): ?>
                 <div class="thin-title text-center">
                     <h2>
@@ -96,7 +96,7 @@ function gdi_empreendimentos($attrs) {
                         )
 
                         ?>
-                        <div class="item col-12 <?php echo $item_col_class; ?>">
+                        <div class="item col-12 col-sm-6 <?php echo $item_col_class; ?>">
                             <div class="image">
                                 <img class="w-100" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
                             </div>

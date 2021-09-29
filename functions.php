@@ -58,6 +58,12 @@ final class GDI_Theme
 		// Enqueue theme fonts
 		add_action("wp_enqueue_scripts", array(THEME_CLASS, "theme_fonts"));
 		add_action("admin_enqueue_scripts", array(THEME_CLASS, "theme_fonts"));
+		
+        // Add action to make custom query before loading posts
+        add_action("pre_get_posts", array(THEME_CLASS, "set_query_params"));
+        
+		// Add action to define custom excerpt length
+        add_filter("excerpt_length", array(THEME_CLASS, "custom_excerpt_len"), 999);
 	}
 
 	/**
@@ -248,6 +254,34 @@ final class GDI_Theme
 	{
 		$theme = wp_get_theme();	
 		return $theme->get("Version");
+	}
+	
+	/**
+     * Set query params for blog page by using the GET params
+     *
+     * @param [array] $query
+	 * @since 2.0
+     */
+    public static function set_query_params( $query ) {
+	
+        if( $query->is_main_query() 
+        && !$query->is_feed() ) {
+        
+            if(isset($_GET['category'])) {
+                $category = $_GET['category'];
+                $query->set( 'category_name', $category );
+            }
+        }
+    }
+
+	/**
+     * Set custom excerpt length
+     *
+     * @param int $length
+	 * @since 2.0
+     */
+	public static function custom_excerpt_len( $length ) {
+		return 20;
 	}
 
 }

@@ -12,6 +12,18 @@
         }
     }
 
+    &.no-bg {
+        background-color: transparent;
+    }
+
+    &.item-border {
+        .items .item {
+            .info {
+                border: 1px solid #CED1D9;
+            }
+        }
+    }
+
     .items {      
         
         .item {
@@ -31,7 +43,27 @@
                     height: 100%;
                     
                     cursor: pointer;
+
+                    z-index: 0;
                 } 
+
+                .tag-overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 2;
+
+                    background-color: rgba(#010C2A, .6);
+                    color: white;
+                    padding: 10px 15px;
+
+                    span {
+                        display: block;
+                        font-size: .875rem;
+                        font-weight: 300;
+                        line-height: 1;
+                    }
+                }
             }
     
             .info {

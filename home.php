@@ -8,6 +8,6 @@
 
 get_header();
 
-// Show blog posts
+get_template_part("partials/blog");
 
 get_footer();

@@ -1,0 +1,44 @@
+.feed {
+
+    .post {
+        .image {
+            img {
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+        .content {
+            padding: 20px;
+            margin: auto;
+
+            .title {
+
+            }
+            .meta {
+                color: #777E8E;
+            }
+
+            .excerpt {
+                font-size: .9rem;
+            }
+
+            .action-wrap {
+                display: flex;
+
+                .action {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .no-posts {
+        .action {
+            font-size: 1rem;
+
+            span {
+                line-height: 1;
+            }
+        }
+    }
+}

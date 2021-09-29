@@ -51,7 +51,7 @@ function blog_feed($attrs) {
             ),
         );
 
-        $blog_link .= "?=category_name=" . $cat_slug;
+        $blog_link .= "?category=" . $cat_slug;
     }
 
     if($not_category) {
@@ -110,17 +110,19 @@ function blog_feed($attrs) {
                         $date = get_the_date();
 
                         // Get the first tag name
-                        $tag_name = get_the_tags()[0];
+                        $tag = get_the_tags()[0];
 
                         ?>
                         <div class="item col-12 col-sm-6 col-lg-3">
                             <div class="image clink" href="<?php echo $permalink; ?>">
                                 <img class="w-100" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+                                <?php if($tag->name): ?>
                                 <div class="tag-overlay">
                                     <span>
-                                        <?php echo $tag_name; ?>
+                                        <?php echo $tag->name; ?>
                                     </span>
                                 </div>
+                                <?php endif; ?>
                             </div>
                             <div class="info text-start">
                                 <div class="upper-part">
@@ -136,7 +138,7 @@ function blog_feed($attrs) {
                                 <small class="date">
                                     <?php echo $date; ?>
                                 </small>
-                                <a href="<?php $permalink; ?>" class="action d-flex">
+                                <a href="<?php echo $permalink; ?>" class="action d-flex">
                                     <div class="ms-auto">
                                         ver mais
                                         <span class="bi bi-chevron-right"></span>

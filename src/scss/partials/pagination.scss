@@ -1,0 +1,30 @@
+.pagination {
+
+    .page-numbers {
+        padding: 0.25rem 0.25rem;
+        margin: 0.5rem;
+        
+        text-decoration: none;
+        color: #010C2A;
+
+        &.current {
+            border-bottom: solid 2px var(--bs-primary);
+        }
+
+        &:hover, &:active, &:focus {
+            color: var(--bs-primary) !important;
+        }
+    }
+
+    .prev, .next {
+        color: #010C2A;
+
+        &:hover, &:active, &:focus {
+            border-top: none !important;
+
+            span {
+                color: var(--bs-primary);
+            }
+        }
+    }
+}

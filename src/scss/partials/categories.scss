@@ -1,0 +1,31 @@
+.categories {
+    .category {
+        padding: 5px 10px;
+
+        border-radius: 5px;
+        border: solid 1px #777E8E;
+        color: #777E8E;
+        font-size: .875rem;
+
+        transition: background-color .1s, color .1s, border .1s;
+
+        &:hover, &:active, &:focus,
+        &.selected {
+            background-color: #777E8E;
+            background-color: #CC7E00;
+            border: solid 1px #CC7E00;
+            color: white;
+        }
+    }
+
+    .category-reset {
+        padding: 5px;
+
+        color: #777E8E;
+        transition: color .1s;
+
+        &:hover, &:active, &:focus {
+            color: #CC7E00;
+        }
+    }
+}

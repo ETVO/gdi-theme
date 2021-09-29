@@ -1,0 +1,12 @@
+.post-wrap {
+    .single {
+        .meta {
+            color: #777E8E;
+        }
+        > .image {
+            img {
+                border-radius: 5px;
+            }
+        }
+    }
+}
