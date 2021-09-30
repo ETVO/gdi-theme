@@ -24,8 +24,8 @@ function blog_feed($attrs) {
 
     $nopaging = true;
     $ppp = 4;
-    $orderby = "title";
-    $order = "ASC";
+    $orderby = "date";
+    $order = "DESC";
 
     // WP_Query arguments
     $args = array(
