@@ -101,7 +101,7 @@
          * Invoke functions when document.body is ready 
          */
         $(document.body).ready(function (){
-            // generateBlogFeed();
+            generateBlogFeed();
             generateClickableCustomLinks();
             generateFormMultiple();
         });
