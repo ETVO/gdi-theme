@@ -19,7 +19,7 @@ function gdi_empreendimentos($attrs) {
     if($cols == 4)
         $item_col_class = 'col-md-4 ' . $item_col_class;
     
-    $post_type = 'empre';
+    $post_type = 'empreendimento';
     $orderby = 'title';
     $order = 'ASC';
     $nopaging = true;

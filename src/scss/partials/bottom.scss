@@ -6,6 +6,20 @@ $bottom-bg: #000719;
     small {
         color: #A5B0CC;
         font-size: .75rem;
+
+        .muted {
+            color: #4C516F;
+
+            a {
+                color: #4C516F;
+
+                transition: color .1s;
+
+                &:hover, &:active, &:focus {
+                    color: #A5B0CC;
+                }
+            }
+        }
     }
 
 }

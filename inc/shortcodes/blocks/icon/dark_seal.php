@@ -2,6 +2,21 @@
 
 function icon_dark_seal($attrs)
 {
+  $img_url = THEME_IMG_URI . 'lr2si_sistema_qualidade_gdi.png';
+
+  ob_start();
+
+  ?>
+  <img src="<?php echo $img_url; ?>" alt="">
+  <?php
+
+  $output = ob_get_contents(); // collect buffered contents
+
+  ob_end_clean(); // Stop HTML buffering
+
+  return $output; // Render contents
+
+
     return '
     <svg xmlns="http://www.w3.org/2000/svg" width="78.475" height="77.943" viewBox="0 0 78.475 77.943">
       <g id="selo-qualidade" transform="translate(-803.884 -345.216)">

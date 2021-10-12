@@ -19,7 +19,7 @@ class CPT_Empre {
      * 
      * @since 1.0
      */
-    public function __construct(string $slug = 'empre')
+    public function __construct(string $slug = 'empreendimento')
     {
         $this->set_slug($slug);
 

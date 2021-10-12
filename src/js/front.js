@@ -7,18 +7,20 @@
 
  (jQuery)(
     function($) {
+        var a = 0;
 
         function generateBlogFeed() {
+            
             // Don't size if it has been disabled
             if($(this).attr("data-sized") == "false")
                 return;
 
             $(".blog_feed").each(function(index, elem) {
+                a = 0;
+
                 sizeUpperPart(elem, 0);
             });
         }   
-
-        a = 0;
 
         function sizeUpperPart(elem, biggest) { 
             // Define recursive operational boolean
