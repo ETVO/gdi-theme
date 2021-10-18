@@ -32,23 +32,29 @@ function concepcao($attrs) {
         <div class="container col-12 col-lg-10 col-xl-9 py-3 mx-auto">
             <div class="thin-title mb-3 text-center">
                 <h2><?php echo $title; ?></h2>
-            </div>
-            <div class="fields row pt-4">
+            </div> 
+            <div class="fields row pt-4 justify-content-center">
                 <?php 
-                if(have_rows('concepcao')) { the_row();
-                foreach($fields as $field): 
-                    $value = get_sub_field($field['attr']);
+                if(have_rows('concepcao')) { 
+                    the_row();
+                    foreach($fields as $field): 
+                        $value = get_sub_field($field['attr']);
 
-                    ?>
-                    <div class="field col-12 col-md-6 col-lg-3 text-center px-2">
-                        <small class="name">
-                            <?php echo $field['name']; ?>
-                        </small>
-                        <h5 class="value">
-                            <?php echo $value; ?>
-                        </h5>
-                    </div>
-                <?php endforeach; }?>
+                        if(!empty(trim($value))):
+                        ?>
+                        <div class="field col-12 col-md-6 col-lg-3 text-center px-2">
+                            <small class="name">
+                                <?php echo $field['name']; ?>
+                            </small>
+                            <h5 class="value">
+                                <?php echo $value; ?>
+                            </h5>
+                        </div>
+                        <?php
+                        endif; 
+                    endforeach; 
+                }
+                ?>
             </div>
         </div>
 
